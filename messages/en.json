@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "title": "AIIDA — Mosque & Islamic Community in Aveiro, Portugal",
+    "description": "Masjid AIIDA is the mosque and Islamic community centre of Aveiro, Portugal. Prayer times, Jumu'ah, Quran classes, family services, events and donations — in English and Portuguese."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "prayer": "Prayer Times",
+    "services": "Services",
+    "events": "Events",
+    "donate": "Donate",
+    "contact": "Contact"
+  },
+  "common": {
+    "siteTagline": "Masjid AIIDA · Aveiro",
+    "donateCta": "Donate",
+    "planVisit": "Plan your visit",
+    "quickLinks": "Quick links",
+    "contactTitle": "Contact",
+    "officeHours": "Office hours",
+    "rights": "© {year} AIIDA — Aveiro Islamic Mosque & Community. All rights reserved.",
+    "addressLabel": "Address",
+    "getDirections": "Get directions",
+    "jumuahTitle": "Jumu'ah Times",
+    "khutbah": "Khutbah",
+    "prayerWord": "Prayer",
+    "emailUs": "Email us",
+    "callUs": "Call us",
+    "copy": "Copy to clipboard",
+    "copied": "Copied",
+    "theme": "Theme"
+  },
+  "prayer": {
+    "fajr": "Fajr",
+    "sunrise": "Sunrise",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Isha",
+    "next": "Next prayer",
+    "in": "in {time}",
+    "iqamah": "Iqamah"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Masjid AIIDA · Aveiro, Portugal",
+      "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+      "titleLead": "A home of prayer,",
+      "titleHighlight": "learning & belonging",
+      "subtitle": "In the heart of Aveiro, our doors are open to every worshipper, every student, every family and every neighbour seeking peace, knowledge and community.",
+      "ctaPrimary": "Today's prayer times",
+      "ctaSecondary": "Plan your visit",
+      "verse": "“Therefore remember Me; I will remember you. And be grateful to Me.”",
+      "verseRef": "Quran 2:152"
+    },
+    "about": {
+      "kicker": "Who we are",
+      "title": "A mosque for all of Aveiro",
+      "body": "AIIDA brings together students from Universidade de Aveiro, families from across Portugal and friends from five continents. We are a place of worship first — and a school, a shelter and a meeting place for the whole city.",
+      "cta": "About AIIDA"
+    },
+    "services": {
+      "kicker": "What we offer",
+      "title": "Services for the community",
+      "subtitle": "From the five daily prayers to weddings, funerals, classes and counselling — we walk with you through every stage of life.",
+      "cta": "All services"
+    },
+    "events": {
+      "kicker": "What's on",
+      "title": "Upcoming events",
+      "subtitle": "Lectures, circles, youth nights and community days.",
+      "cta": "Full calendar"
+    },
+    "donate": {
+      "kicker": "Support the masjid",
+      "title": "Your charity, our foundation",
+      "body": "Every donation keeps the lights on for Fajr, the classes running for the children and the door open for the traveller. “The example of those who spend their wealth in the way of Allah is like a seed…” (Quran 2:261).",
+      "cta": "Ways to give",
+      "note": "Bank transfer · MB WAY · In person at the office"
+    },
+    "welcome": {
+      "title": "New in Aveiro? You belong here.",
+      "body": "Whether you just landed for a semester or moved your whole family across the world, start here: prayer times, a warm welcome desk and someone who speaks your language.",
+      "cta": "Visit us"
+    }
+  },
+  "aboutPage": {
+    "kicker": "About us",
+    "title": "The mosque of Aveiro",
+    "subtitle": "Who we are, why we exist and how we serve the people of this city.",
+    "storyTitle": "Our story",
+    "story1": "AIIDA began as a small prayer room rented by a handful of students and workers who missed the congregation in a city that had never had a mosque. As Aveiro's Muslim community grew — Portuguese returnees, African and Asian families, international students — so did our prayer hall, our classrooms and our ambitions.",
+    "story2": "Today AIIDA is the address of the Muslim community of the Centro region: five daily congregational prayers, Friday services in three languages, weekend madrasah for children, Quran circles for adults, and a growing programme of service to the city around us.",
+    "story3": "We operate as a registered Portuguese association and answer to our members, our board and, above all, to the values we were founded on: sincerity, hospitality and knowledge.",
+    "valuesTitle": "What guides us",
+    "valueFaithTitle": "Faith",
+    "valueFaithBody": "The prayer, the Quran and the teachings of the Prophet ﷺ sit at the centre of everything we do.",
+    "valueHospitalityTitle": "Hospitality",
+    "valueHospitalityBody": "Every guest is honoured, every question welcomed, every newcomer fed — in Aveiro, strangers become family quickly.",
+    "valueKnowledgeTitle": "Knowledge",
+    "valueKnowledgeBody": "From the first letters of Arabic to the study of sacred science, we believe learning is an act of worship.",
+    "teamTitle": "Leadership",
+    "teamSubtitle": "A small team of volunteers and staff, supported by a board of community members.",
+    "facilitiesTitle": "The mosque, space by space",
+    "facilitiesSubtitle": "Built and maintained for comfort, dignity and focus.",
+    "joinTitle": "Join us",
+    "joinBody": "The best way to know us is to visit: come to a prayer, bring your questions, stay for tea."
+  },
+  "prayerPage": {
+    "kicker": "Salah",
+    "title": "Prayer Times",
+    "subtitle": "Five daily prayers in congregation, led by our imam. Times shown are for Aveiro, Portugal.",
+    "monthlyTitle": "Monthly timetable",
+    "monthlyNote": "All times in local time (WET/WEST). Iqamah is held a few minutes after adhan — see today's table.",
+    "headers": {
+      "day": "Date",
+      "weekday": "Weekday",
+      "hijri": "Hijri"
+    },
+    "jumuahNote": "Jumu'ah service every Friday; khutbah in Arabic and English with Portuguese translation. Please arrive 15–20 minutes early.",
+    "methodNote": "Calculated using the Muslim World League method for the coordinates of Aveiro (40.64°N, 8.65°W). Astronomical times may differ from the local masjid's announced iqamah — follow the masjid announcement when in doubt.",
+    "ramadanNote": "During Ramadan, special Tarawih and iftar timings are published on this page and announced in the masjid.",
+    "loadError": "Prayer times are temporarily unavailable. Please try again shortly."
+  },
+  "servicesPage": {
+    "kicker": "Services",
+    "title": "Serving the community, every stage of life",
+    "subtitle": "Worship, learning, family and outreach — what you can find at Masjid AIIDA.",
+    "faqTitle": "Frequently asked questions",
+    "faqSubtitle": "Short answers for visitors and new families.",
+    "ctaTitle": "Need something not listed here?",
+    "ctaBody": "Ask the office — if we can help, we will; if we cannot, we will find someone who can.",
+    "ctaButton": "Contact us"
+  },
+  "eventsPage": {
+    "kicker": "Events",
+    "title": "What's happening at the masjid",
+    "subtitle": "Lectures, study circles, youth nights, community days and worship — everyone is welcome.",
+    "upcomingTitle": "Upcoming",
+    "pastTitle": "Recent",
+    "emptyUpcoming": "No upcoming events announced. Check back soon or ask the office.",
+    "location": "Location",
+    "ctaTitle": "Never miss an event",
+    "ctaBody": "Follow our social channels or ask to join the community WhatsApp list at the office."
+  },
+  "donatePage": {
+    "kicker": "Support us",
+    "title": "Give with an open hand",
+    "subtitle": "Zakat, sadaqah and general support — every centavo goes into running the masjid and serving Aveiro.",
+    "bankTitle": "Bank transfer (IBAN)",
+    "bankBody": "The simplest way to give, from any international bank.",
+    "bankHint": "Send in euros from your bank app or counter — SEPA (EU) and SWIFT (worldwide) are both supported. Tap the copy icon on any field and paste it into the transfer form.",
+    "recipientLabel": "Recipient",
+    "ibanLabel": "IBAN",
+    "swiftLabel": "BIC / SWIFT",
+    "mbwayTitle": "MB WAY",
+    "mbwayBody": "Open your MB WAY app, choose Transfer, enter the number below, add the amount and confirm — it reaches the association instantly under the name AIIDA. MB WAY requires a Portuguese bank account and works only in Portugal.",
+    "mbwayStatus": "Portugal only",
+    "mbwayNumberLabel": "Number",
+    "mbwayNameLabel": "Name",
+    "officeTitle": "At the masjid",
+    "officeBody": "Donation boxes are available in the entrance area, and the office accepts contributions during opening hours — receipts on request.",
+    "monthlyTitle": "Become a monthly supporter",
+    "monthlyBody": "Set up a standing order from your bank and give the masjid a predictable income. Ask the office for the standing order form.",
+    "zakatNote": "Zakat distribution is handled by the office according to the eligible categories of the Shariah; specify “Zakat” in your transfer description.",
+    "impactTitle": "Where your donation goes",
+    "impact1Title": "The masjid itself",
+    "impact1Body": "Rent, utilities, maintenance, cleaning and the wudu areas — keeping prayer spaces warm, safe and open.",
+    "impact2Title": "Education",
+    "impact2Body": "Teachers and materials for the Quran classes, madrasah, Arabic courses and the library.",
+    "impact3Title": "Community",
+    "impact3Body": "Iftars, support for students and newcomers, funeral services, and help for families in need.",
+    "receiptTitle": "Need a receipt?",
+    "receiptBody": "As a registered association we can issue an official fatura-recibo, which may be tax-deductible in Portugal. Email the office with your transfer details."
+  },
+  "contactPage": {
+    "kicker": "Contact",
+    "title": "Come and say salaam",
+    "subtitle": "Questions, wedding arrangements, students arriving, or just want to visit — reach out.",
+    "infoTitle": "Get in touch",
+    "mapTitle": "Find us",
+    "beforeTitle": "Before you visit",
+    "before1": "Modest, comfortable clothing; scarves available at the door for sisters.",
+    "before2": "Shoes come off before the prayer hall; there is storage at the entrance.",
+    "before3": "During prayer times we ask visitors to wait quietly in the welcome area.",
+    "responseNote": "We usually reply within one working day, in English or português."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you are looking for has moved or never existed. And Allah knows best.",
+    "cta": "Back to home"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "body": "An unexpected error occurred while loading this page. Please try again — if it keeps happening, contact us and we will sort it out.",
+    "cta": "Try again"
+  }
+}

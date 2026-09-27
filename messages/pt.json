@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "title": "AIIDA — Mesquita e Comunidade Islâmica de Aveiro, Portugal",
+    "description": "A Masjid AIIDA é a mesquita e o centro islâmico da comunidade de Aveiro, Portugal. Horários das orações, Jumu'ah, aulas de Alcorão, serviços para a família, eventos e donativos — em inglês e português."
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Sobre nós",
+    "prayer": "Horários das Orações",
+    "services": "Serviços",
+    "events": "Eventos",
+    "donate": "Donativos",
+    "contact": "Contactos"
+  },
+  "common": {
+    "siteTagline": "Masjid AIIDA · Aveiro",
+    "donateCta": "Doar",
+    "planVisit": "Planeie a sua visita",
+    "quickLinks": "Ligações rápidas",
+    "contactTitle": "Contactos",
+    "officeHours": "Horário do secretariado",
+    "rights": "© {year} AIIDA — Mesquita e Comunidade Islâmica de Aveiro. Todos os direitos reservados.",
+    "addressLabel": "Morada",
+    "getDirections": "Como chegar",
+    "jumuahTitle": "Horários do Jumu'ah",
+    "khutbah": "Khutbah",
+    "prayerWord": "Oração",
+    "emailUs": "Envie-nos um email",
+    "callUs": "Ligue-nos",
+    "copy": "Copiar para a área de transferência",
+    "copied": "Copiado",
+    "theme": "Tema"
+  },
+  "prayer": {
+    "fajr": "Fajr",
+    "sunrise": "Nascer do sol",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Isha",
+    "next": "Próxima oração",
+    "in": "daqui a {time}",
+    "iqamah": "Iqamah"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Masjid AIIDA · Aveiro, Portugal",
+      "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+      "titleLead": "Uma casa de oração,",
+      "titleHighlight": "de saber e de pertença",
+      "subtitle": "No coração de Aveiro, as nossas portas estão abertas a cada fiel, a cada estudante, a cada família e a cada vizinho que procura paz, conhecimento e comunidade.",
+      "ctaPrimary": "Horários de hoje",
+      "ctaSecondary": "Planeie a sua visita",
+      "verse": "«Lembrai-vos de Mim e Eu lembrarei-me de vós; e agradecê-Me-eis, e não negareis a Minha graça.»",
+      "verseRef": "Alcorão 2:152"
+    },
+    "about": {
+      "kicker": "Quem somos",
+      "title": "Uma mesquita para toda Aveiro",
+      "body": "A AIIDA junta estudantes da Universidade de Aveiro, famílias de todo o Portugal e amigos de cinco continentes. Somos, antes de tudo, um lugar de culto — e também uma escola, um refúgio e um ponto de encontro para toda a cidade.",
+      "cta": "Sobre a AIIDA"
+    },
+    "services": {
+      "kicker": "O que oferecemos",
+      "title": "Serviços para a comunidade",
+      "subtitle": "Das cinco orações diárias aos casamentos, funerais, aulas e aconselhamento — caminhamos consigo em todas as fases da vida.",
+      "cta": "Todos os serviços"
+    },
+    "events": {
+      "kicker": "Agenda",
+      "title": "Próximos eventos",
+      "subtitle": "Palestras, círculos de estudo, noites de jovens e dias comunitários.",
+      "cta": "Calendário completo"
+    },
+    "donate": {
+      "kicker": "Apoie a mesquita",
+      "title": "A sua caridade, a nossa fundação",
+      "body": "Cada donativo mantém a luz acesa na oração do Fajr, as aulas a correr para as crianças e a porta aberta para quem viaja. «O exemplo dos que gastam os seus bens pela causa de Deus é como o de uma semente…» (Alcorão 2:261).",
+      "cta": "Formas de contribuir",
+      "note": "Transferência bancária · MB WAY · No secretariado"
+    },
+    "welcome": {
+      "title": "Chegou a Aveiro? Está no seu lugar.",
+      "body": "Se acaba de chegar para um semestre ou se mudou a família inteira para o outro lado do mundo, comece por aqui: horários das orações, uma receção acolhedora e alguém que fala a sua língua.",
+      "cta": "Visite-nos"
+    }
+  },
+  "aboutPage": {
+    "kicker": "Sobre nós",
+    "title": "A mesquita de Aveiro",
+    "subtitle": "Quem somos, por que existimos e como servimos as pessoas desta cidade.",
+    "storyTitle": "A nossa história",
+    "story1": "A AIIDA começou como uma pequena sala de oração arrendada por alguns estudantes e trabalhadores que sentiam falta da congregação numa cidade que nunca tivera mesquita. À medida que a comunidade muçulmana de Aveiro crescia — portugueses regressados, famílias africanas e asiáticas, estudantes internacionais — cresciam também a nossa sala de oração, as salas de aula e as nossas ambições.",
+    "story2": "Hoje, a AIIDA é o endereço da comunidade muçulmana da região Centro: cinco orações em congregação por dia, serviços de sexta-feira em três línguas, madrasah de fim de semana para as crianças, círculos de Alcorão para adultos e um programa cada vez maior de serviço à cidade que nos rodeia.",
+    "story3": "Funcionamos como associação portuguesa registada e respondemos perante os nossos sócios, a nossa direção e, acima de tudo, perante os valores que nos fundaram: sinceridade, hospitalidade e conhecimento.",
+    "valuesTitle": "O que nos guia",
+    "valueFaithTitle": "Fé",
+    "valueFaithBody": "A oração, o Alcorão e os ensinamentos do Profeta ﷺ estão no centro de tudo o que fazemos.",
+    "valueHospitalityTitle": "Hospitalidade",
+    "valueHospitalityBody": "Cada convidado é honrado, cada pergunta é bem-vinda, cada recém-chegado é recebido com comida — em Aveiro, os estranhos depressa se tornam família.",
+    "valueKnowledgeTitle": "Conhecimento",
+    "valueKnowledgeBody": "Das primeiras letras do árabe ao estudo das ciências sagradas, acreditamos que aprender é um ato de adoração.",
+    "teamTitle": "Direção e equipa",
+    "teamSubtitle": "Uma pequena equipa de voluntários e colaboradores, apoiada por uma direção de membros da comunidade.",
+    "facilitiesTitle": "A mesquita, espaço a espaço",
+    "facilitiesSubtitle": "Construída e mantida para conforto, dignidade e concentração.",
+    "joinTitle": "Junte-se a nós",
+    "joinBody": "A melhor forma de nos conhecer é visitar: venha a uma oração, traga as suas perguntas e fique para um chá."
+  },
+  "prayerPage": {
+    "kicker": "Salah",
+    "title": "Horários das Orações",
+    "subtitle": "Cinco orações diárias em congregação, dirigidas pelo nosso imão. Horários para Aveiro, Portugal.",
+    "monthlyTitle": "Quadro mensal",
+    "monthlyNote": "Todos os horários em hora local (WET/WEST). O iqamah realiza-se poucos minutos depois do adhan — veja o quadro de hoje.",
+    "headers": {
+      "day": "Dia",
+      "weekday": "Semana",
+      "hijri": "Hijri"
+    },
+    "jumuahNote": "Sessão de Jumu'ah todas as sextas-feiras; khutbah em árabe e inglês com tradução em português. Chegue com 15 a 20 minutos de antecedência.",
+    "methodNote": "Calculados segundo o método da Liga Islâmica Mundial para as coordenadas de Aveiro (40.64°N, 8.65°O). Os horários astronómicos podem diferir ligeiramente do iqamah anunciado na mesquita — em caso de dúvida, siga o anúncio da mesquita.",
+    "ramadanNote": "Durante o Ramadão, os horários especiais de Tarawih e iftar são publicados nesta página e anunciados na mesquita.",
+    "loadError": "Os horários das orações estão temporariamente indisponíveis. Tente novamente em breve."
+  },
+  "servicesPage": {
+    "kicker": "Serviços",
+    "title": "Ao serviço da comunidade, em todas as fases da vida",
+    "subtitle": "Culto, ensino, família e diálogo — o que encontra na Masjid AIIDA.",
+    "faqTitle": "Perguntas frequentes",
+    "faqSubtitle": "Respostas curtas para visitantes e novas famílias.",
+    "ctaTitle": "Precisa de algo que não está aqui?",
+    "ctaBody": "Pergunte ao secretariado — se pudermos ajudar, ajudamos; se não pudermos, encontramos quem possa.",
+    "ctaButton": "Contacte-nos"
+  },
+  "eventsPage": {
+    "kicker": "Eventos",
+    "title": "O que se passa na mesquita",
+    "subtitle": "Palestras, círculos de estudo, noites de jovens, dias comunitários e culto — todos são bem-vindos.",
+    "upcomingTitle": "Próximos",
+    "pastTitle": "Recentes",
+    "emptyUpcoming": "Ainda não há eventos anunciados. Volte em breve ou pergunte ao secretariado.",
+    "location": "Local",
+    "ctaTitle": "Não perca nenhum evento",
+    "ctaBody": "Siga as nossas redes sociais ou peça no secretariado para entrar na lista de WhatsApp da comunidade."
+  },
+  "donatePage": {
+    "kicker": "Apoie-nos",
+    "title": "Dê de mão aberta",
+    "subtitle": "Zakat, sadaqá e apoio geral — cada cêntimo vai para o funcionamento da mesquita e para o serviço de Aveiro.",
+    "bankTitle": "Transferência bancária (IBAN)",
+    "bankBody": "A forma mais simples de dar, a partir de qualquer banco internacional.",
+    "bankHint": "Envie em euros da sua app ou balcão — são suportadas transferências SEPA (UE) e SWIFT (internacionais). Toque no ícone de copiar em qualquer campo e cole no formulário da transferência.",
+    "recipientLabel": "Beneficiário",
+    "ibanLabel": "IBAN",
+    "swiftLabel": "BIC / SWIFT",
+    "mbwayTitle": "MB WAY",
+    "mbwayBody": "Abra a app MB WAY, escolha Transferir, introduza o número abaixo, adicione a quantia e confirme — chega instantaneamente à associação em nome de AIIDA. O MB WAY requer uma conta bancária portuguesa e funciona apenas em Portugal.",
+    "mbwayStatus": "Só em Portugal",
+    "mbwayNumberLabel": "Número",
+    "mbwayNameLabel": "Nome",
+    "officeTitle": "Na mesquita",
+    "officeBody": "Há cofres de donativos na zona de entrada e o secretariado aceita contribuições durante o horário de atendimento — recibo a pedido.",
+    "monthlyTitle": "Torne-se apoiante mensal",
+    "monthlyBody": "Crie uma ordem permanente no seu banco e dê à mesquita um rendimento previsível. Peça o formulário ao secretariado.",
+    "zakatNote": "A distribuição do zakat é tratada pelo secretariado segundo as categorias elegíveis da Sharia; indique «Zakat» na descrição da transferência.",
+    "impactTitle": "Onde o seu donativo é aplicado",
+    "impact1Title": "A própria mesquita",
+    "impact1Body": "Renda, utilidades, manutenção, limpeza e salas de abluções — manter os espaços de oração quentes, seguros e abertos.",
+    "impact2Title": "Educação",
+    "impact2Body": "Professores e materiais para as aulas de Alcorão, a madrasah, os cursos de árabe e a biblioteca.",
+    "impact3Title": "Comunidade",
+    "impact3Body": "Iftars, apoio a estudantes e recém-chegados, serviços funerários e ajuda a famílias em necessidade.",
+    "receiptTitle": "Precisa de recibo?",
+    "receiptBody": "Enquanto associação registada, podemos emitir fatura-recibo oficial, que pode ser dedutível no IRS em Portugal. Envie os dados da transferência ao secretariado por email."
+  },
+  "contactPage": {
+    "kicker": "Contactos",
+    "title": "Venha dizer salam",
+    "subtitle": "Perguntas, marcação de casamento, estudantes à chegada, ou apenas vontade de visitar — fale connosco.",
+    "infoTitle": "Fale connosco",
+    "mapTitle": "Encontre-nos",
+    "beforeTitle": "Antes de visitar",
+    "before1": "Vestuário discreto e confortável; há lenços à porta para as senhoras.",
+    "before2": "Os sapatos tiram-se antes da sala de oração; existe arrumação à entrada.",
+    "before3": "Durante as orações, pedimos aos visitantes que aguardem com serenidade na zona de acolhimento.",
+    "responseNote": "Respondemos normalmente dentro de um dia útil, em inglês ou português."
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "body": "A página que procura mudou-se ou nunca existiu. E Deus sabe melhor.",
+    "cta": "Voltar ao início"
+  },
+  "error": {
+    "title": "Ocorreu um erro",
+    "body": "Ocorreu um erro inesperado ao carregar esta página. Tente novamente — se o problema persistir, contacte-nos e resolveremos.",
+    "cta": "Tentar novamente"
+  }
+}
