@@ -26,6 +26,60 @@ export type DayPrayerTimes = {
   fetchedAt: number;
 };
 
+const DAY_MS = 86_400_000;
+
+export type NextPrayerInfo = {
+  next: PrayerEntry;
+  prev: PrayerEntry;
+  nextTs: number;
+  prevTs: number;
+};
+
+export function computeNextPrayer(
+  entries: PrayerEntry[],
+  now: number
+): NextPrayerInfo {
+  const prayers = entries.filter((e) => e.name !== "sunrise");
+  for (let i = 0; i < prayers.length; i++) {
+    if (prayers[i].adhanTs > now) {
+      const prev = i > 0 ? prayers[i - 1] : prayers[prayers.length - 1];
+      return {
+        next: prayers[i],
+        prev,
+        nextTs: prayers[i].adhanTs,
+        prevTs: i > 0 ? prev.adhanTs : prev.adhanTs - DAY_MS,
+      };
+    }
+  }
+  return {
+    next: prayers[0],
+    prev: prayers[prayers.length - 1],
+    nextTs: prayers[0].adhanTs + DAY_MS,
+    prevTs: prayers[prayers.length - 1].adhanTs,
+  };
+}
+
+export function computeCurrentPrayer(
+  entries: PrayerEntry[],
+  now: number
+): PrayerEntry {
+  const prayers = entries.filter((e) => e.name !== "sunrise");
+  for (let i = prayers.length - 1; i >= 0; i--) {
+    if (prayers[i].adhanTs <= now) return prayers[i];
+  }
+  return prayers[prayers.length - 1];
+}
+
+export function formatCountdown(ms: number): string {
+  const total = Math.max(0, Math.floor(ms / 1000));
+  const h = Math.floor(total / 3600);
+  const m = Math.floor((total % 3600) / 60);
+  const s = total % 60;
+  const pad = (n: number) => n.toString().padStart(2, "0");
+  if (h > 0) return `${h}h ${pad(m)}m`;
+  return `${pad(m)}:${pad(s)}`;
+}
+
 type AladhanTiming = Record<string, string>;
 
 type AladhanDayResponse = {

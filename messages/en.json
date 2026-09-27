@@ -39,6 +39,7 @@
     "maghrib": "Maghrib",
     "isha": "Isha",
     "next": "Next prayer",
+    "current": "Current",
     "in": "in {time}",
     "iqamah": "Iqamah"
   },

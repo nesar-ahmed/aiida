@@ -107,6 +107,7 @@ export function SiteHeader() {
                   return (
                     <SheetClose
                       key={item.key}
+                      nativeButton={false}
                       render={
                         <Link
                           href={item.href}

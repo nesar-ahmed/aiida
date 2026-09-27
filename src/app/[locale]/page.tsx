@@ -1,13 +1,15 @@
 import {
+  ArrowRightIcon,
   BookOpenIcon,
   ClockIcon,
   GlobeIcon,
   HandHeartIcon,
   HeartIcon,
   LandmarkIcon,
+  MoonStarIcon,
+  QuoteIcon,
   SparklesIcon,
   UsersIcon,
-  ArrowRightIcon,
 } from "lucide-react";
 import type { ComponentType } from "react";
 import { getTranslations } from "next-intl/server";
@@ -17,10 +19,15 @@ import { Reveal } from "@/components/reveal";
 import { GeometricPattern } from "@/components/pattern";
 import { SectionKicker } from "@/components/page-hero";
 import { EventsList } from "@/components/event-card";
+import { HeroPrayerPanel } from "@/components/hero-prayer-panel";
 import { SERVICES } from "@/content/services";
 import { EVENTS } from "@/content/events";
 import { localized } from "@/content/config";
-import { lisbonToday } from "@/lib/prayer";
+import {
+  getTodayPrayerTimes,
+  lisbonToday,
+  type DayPrayerTimes,
+} from "@/lib/prayer";
 
 const ICONS: Record<string, ComponentType<{ className?: string }>> = {
   clock: ClockIcon,
@@ -45,43 +52,46 @@ export default async function HomePage({
     .sort((a, b) => (a.date < b.date ? -1 : 1))
     .slice(0, 4);
 
+  let heroDay: DayPrayerTimes | null = null;
+  try {
+    heroDay = await getTodayPrayerTimes();
+  } catch {
+    heroDay = null;
+  }
+
   return (
     <>
       <section className="relative overflow-hidden">
         <GeometricPattern
           id="home-hero"
-          className="absolute inset-0 h-full w-full mask-[radial-gradient(70%_70%_at_50%_30%,black,transparent)]"
+          className="absolute inset-0 h-full w-full mask-[radial-gradient(80%_80%_at_50%_20%,black,transparent)]"
         />
-        <div className="pointer-events-none absolute -top-24 right-0 size-96 rounded-full bg-gold/10 blur-3xl" />
-        <div className="pointer-events-none absolute bottom-0 -left-24 size-96 rounded-full bg-primary/10 blur-3xl" />
+        <div className="pointer-events-none absolute -top-32 -right-24 size-[28rem] rounded-full bg-gold/10 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-40 -left-32 size-[30rem] rounded-full bg-primary/10 blur-3xl" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-gold/40 to-transparent" />
 
-        <div className="relative mx-auto w-full max-w-6xl px-4 py-20 sm:py-24 lg:py-28">
-          <Reveal className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-16 px-4 py-16 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:py-28 xl:gap-20">
+          <Reveal>
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background/70 px-4 py-1.5 text-xs font-semibold tracking-[0.18em] text-primary uppercase shadow-sm backdrop-blur sm:text-[13px]">
+              <MoonStarIcon className="size-3.5 text-gold" />
               {th("kicker")}
-            </p>
-            <p
-              className="font-arabic mt-4 text-2xl text-gold"
-              dir="rtl"
-              lang="ar"
-            >
-              {th("arabic")}
-            </p>
-            <h1 className="mt-4 text-balance text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
+            </div>
+            <h1 className="mt-6 text-balance text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl xl:text-6xl">
               {th("titleLead")}{" "}
               <span className="bg-linear-to-r from-primary via-primary to-gold bg-clip-text text-transparent">
                 {th("titleHighlight")}
               </span>
             </h1>
-            <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
               {th("subtitle")}
             </p>
-            <div className="mt-7 flex flex-wrap justify-center gap-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               <Button
                 size="lg"
                 render={<Link href="/prayer" />}
-                className="rounded-full"
+                className="rounded-full shadow-lg shadow-primary/20"
               >
+                <ClockIcon className="size-4" />
                 {th("ctaPrimary")}
               </Button>
               <Button
@@ -94,14 +104,59 @@ export default async function HomePage({
                 <ArrowRightIcon className="size-4" />
               </Button>
             </div>
-            <figure className="mt-9 max-w-xl border-l-2 border-gold/60 pl-4 text-left">
-              <blockquote className="text-sm italic leading-relaxed text-muted-foreground sm:text-base">
-                {th("verse")}
-              </blockquote>
-              <figcaption className="mt-1.5 text-xs font-semibold text-gold">
-                {th("verseRef")}
-              </figcaption>
-            </figure>
+          </Reveal>
+
+          <Reveal delay={0.15}>
+            <div className="relative mx-auto mb-10 w-full max-w-xs sm:max-w-sm lg:mb-14 lg:max-w-md">
+              <div className="pointer-events-none absolute -inset-8 rounded-full bg-linear-to-b from-primary/10 via-transparent to-gold/10 blur-2xl" />
+              <div className="relative aspect-3/4 overflow-hidden rounded-t-full rounded-b-[2rem] border bg-linear-to-b from-secondary/80 via-card to-card shadow-2xl shadow-primary/10">
+                <GeometricPattern
+                  id="home-hero-arch"
+                  className="absolute inset-0 h-full w-full opacity-50"
+                />
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-linear-to-b from-primary/10 to-transparent" />
+                <div className="pointer-events-none absolute inset-3 rounded-t-full rounded-b-[1.5rem] border border-gold/30" />
+                <p
+                  className="font-arabic absolute inset-x-8 top-12 text-center text-lg leading-relaxed text-gold sm:top-16 sm:text-xl"
+                  dir="rtl"
+                  lang="ar"
+                >
+                  {th("arabic")}
+                </p>
+                {heroDay ? (
+                  <div className="absolute inset-x-0 bottom-0 px-5 pb-36 text-center lg:px-7 lg:pb-40">
+                    <HeroPrayerPanel day={heroDay} />
+                  </div>
+                ) : (
+                  <svg
+                    viewBox="0 0 96 96"
+                    aria-hidden
+                    className="absolute top-1/2 left-1/2 size-24 -translate-x-1/2 -translate-y-1/2 text-primary/25 sm:size-28"
+                  >
+                    <g fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <circle
+                        cx="48"
+                        cy="48"
+                        r="46"
+                        strokeDasharray="1 7"
+                        className="text-gold/40"
+                      />
+                      <path d="M48 8 L61 35 L88 48 L61 61 L48 88 L35 61 L8 48 L35 35 Z" />
+                      <circle cx="48" cy="48" r="9" />
+                    </g>
+                  </svg>
+                )}
+              </div>
+              <figure className="absolute inset-x-3 -bottom-6 rounded-2xl border bg-background/90 p-4 text-center shadow-xl shadow-primary/10 backdrop-blur-md sm:inset-x-6 sm:-bottom-8 sm:p-5">
+                <QuoteIcon className="mx-auto size-4 -scale-x-100 text-gold" />
+                <blockquote className="mt-2 text-sm leading-relaxed text-muted-foreground italic sm:text-base">
+                  {th("verse")}
+                </blockquote>
+                <figcaption className="mt-2 text-[11px] font-bold tracking-[0.2em] text-gold uppercase sm:text-xs">
+                  {th("verseRef")}
+                </figcaption>
+              </figure>
+            </div>
           </Reveal>
         </div>
       </section>

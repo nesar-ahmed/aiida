@@ -39,6 +39,7 @@
     "maghrib": "Maghrib",
     "isha": "Isha",
     "next": "Próxima oração",
+    "current": "Atual",
     "in": "daqui a {time}",
     "iqamah": "Iqamah"
   },

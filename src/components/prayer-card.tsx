@@ -1,68 +1,28 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import type { DayPrayerTimes, PrayerEntry } from "@/lib/prayer";
+import type { DayPrayerTimes } from "@/lib/prayer";
+import {
+  computeNextPrayer,
+  formatCountdown,
+  type NextPrayerInfo,
+} from "@/lib/prayer";
+import { useNow } from "@/lib/use-now";
 import { cn } from "cn";
-
-const DAY_MS = 86_400_000;
-
-type NextInfo = {
-  next: PrayerEntry;
-  prev: PrayerEntry;
-  nextTs: number;
-  prevTs: number;
-};
-
-function computeNext(entries: PrayerEntry[], now: number): NextInfo {
-  const prayers = entries.filter((e) => e.name !== "sunrise");
-  for (let i = 0; i < prayers.length; i++) {
-    if (prayers[i].adhanTs > now) {
-      const prev = i > 0 ? prayers[i - 1] : prayers[prayers.length - 1];
-      return {
-        next: prayers[i],
-        prev,
-        nextTs: prayers[i].adhanTs,
-        prevTs: i > 0 ? prev.adhanTs : prev.adhanTs - DAY_MS,
-      };
-    }
-  }
-  return {
-    next: prayers[0],
-    prev: prayers[prayers.length - 1],
-    nextTs: prayers[0].adhanTs + DAY_MS,
-    prevTs: prayers[prayers.length - 1].adhanTs,
-  };
-}
-
-function pad(n: number) {
-  return n.toString().padStart(2, "0");
-}
-
-function formatRemaining(ms: number) {
-  const total = Math.max(0, Math.floor(ms / 1000));
-  const h = Math.floor(total / 3600);
-  const m = Math.floor((total % 3600) / 60);
-  const s = total % 60;
-  if (h > 0) return `${h}h ${pad(m)}m`;
-  return `${pad(m)}:${pad(s)}`;
-}
 
 export function PrayerCard({ day }: { day: DayPrayerTimes }) {
   const t = useTranslations("prayer");
   const locale = useLocale();
-  const [now, setNow] = useState(() => Date.now());
-
-  useEffect(() => {
-    const id = setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(id);
-  }, []);
-
-  const { next, nextTs, prevTs } = computeNext(day.entries, now);
-  const progress = Math.min(
-    1,
-    Math.max(0, (now - prevTs) / (nextTs - prevTs))
-  );
+  const now = useNow();
+  const nextInfo: NextPrayerInfo | null =
+    now === null ? null : computeNextPrayer(day.entries, now);
+  const progress =
+    now === null || !nextInfo
+      ? 0
+      : Math.min(
+          1,
+          Math.max(0, (now - nextInfo.prevTs) / (nextInfo.nextTs - nextInfo.prevTs))
+        );
 
   const dateLabel = new Intl.DateTimeFormat(
     locale === "pt" ? "pt-PT" : "en-GB",
@@ -82,7 +42,7 @@ export function PrayerCard({ day }: { day: DayPrayerTimes }) {
 
       <div className="grid grid-cols-3 text-center min-[1024px]:grid-cols-6">
         {day.entries.map((entry) => {
-          const isNext = entry.name === next.name;
+          const isNext = nextInfo !== null && entry.name === nextInfo.next.name;
           return (
             <div
               key={entry.name}
@@ -123,11 +83,17 @@ export function PrayerCard({ day }: { day: DayPrayerTimes }) {
         <div className="flex items-baseline justify-between gap-3 text-sm">
           <span className="font-semibold text-muted-foreground">
             {t("next")}:{" "}
-            <span className="text-foreground">{t(next.name)}</span>{" "}
-            <span className="tabular-nums">({next.adhan})</span>
+            <span className="text-foreground">
+              {nextInfo ? t(nextInfo.next.name) : "\u00A0"}
+            </span>{" "}
+            {nextInfo ? (
+              <span className="tabular-nums">({nextInfo.next.adhan})</span>
+            ) : null}
           </span>
           <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-bold tabular-nums text-primary">
-            {t("in", { time: formatRemaining(nextTs - now) })}
+            {nextInfo && now !== null
+              ? t("in", { time: formatCountdown(nextInfo.nextTs - now) })
+              : "\u2013:\u2013"}
           </span>
         </div>
         <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-muted">
